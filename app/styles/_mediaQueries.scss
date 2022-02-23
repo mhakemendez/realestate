@@ -1,0 +1,23 @@
+@mixin sm-screen {
+    @media only screen and(max-width: 991px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and(max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin mb-landscape {
+    @media only screen and(max-width: 567px) {
+        @content;
+    }
+}
+
+@mixin mb-portrait {
+    @media only screen and(max-width: 479px) {
+        @content;
+    }
+}

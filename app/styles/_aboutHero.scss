@@ -1,0 +1,281 @@
+.about-hero {
+    background: $white-font;
+    &-container {
+        @include container();
+        padding: 6.79em 5.43em 4.76em;
+    }
+
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        @include sm-screen {
+            flex-direction: column;
+        }
+    }
+
+    &-left {
+        width: 44.51%;
+
+        @include sm-screen {
+            width: 100%;
+        }
+        @include mb-portrait {
+            text-align: center;
+        }
+    }
+
+    &-lux {
+        background: #123447;
+        border-radius: 2px;
+        display: inline;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: $white;
+        padding: 8px 24px;
+    }
+
+    &-header {
+        font-size: 56px;
+        line-height: 100%;
+        letter-spacing: -0.01em;
+        color: #123447;
+        font-family: $crimson;
+        max-width: 584px;
+        font-weight: 400;
+        margin: 21px 0px 37px;
+
+        @include tablet {
+            font-size: 40px;
+        }
+        @include mb-portrait {
+            font-size: 28px;
+        }
+    }
+
+    &-brsq {
+        display: flex;
+        gap: 8px;
+
+        @include mb-portrait {
+            justify-content: space-between;
+        }
+    }
+
+    .about-info {
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: $blue;
+        padding: 8px 24px;
+        border: 1px solid #e6ebeb;
+        border-radius: 4px;
+
+        @include tablet {
+            font-size: 14px;
+        }
+
+        @include mb-portrait {
+            font-size: 12px;
+        }
+    }
+
+    .abt-bth {
+        display: inline-block;
+        margin-top: 8px;
+        margin-bottom: 4.62em;
+    }
+
+    &-desc {
+        .about-desc-title {
+            @include aboutTitle();
+        }
+
+        .about-desc {
+            font-size: 20px;
+            line-height: 160%;
+            color: $blue;
+            margin: 12px 0px 2.45em;
+
+            @include tablet {
+                font-size: 16px;
+            }
+            @include mb-portrait {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .amenities-title {
+        @include aboutTitle();
+        padding-bottom: 17px;
+        border-bottom: 1px solid #e6ebeb;
+    }
+
+    .amenities {
+        font-size: 20px;
+        line-height: 160%;
+        color: $blue;
+        padding: 24px 0px;
+        border-bottom: 1px solid #e6ebeb;
+
+        @include tablet {
+            font-size: 18px;
+        }
+        @include mb-portrait {
+            font-size: 14px;
+        }
+    }
+
+    &-agent {
+        margin-top: 6.79em;
+
+        .listing-agent-title {
+            @include aboutTitle();
+            margin-bottom: 30px;
+        }
+
+        .listing-agent {
+            display: flex;
+            gap: 20px;
+
+            @include mb-portrait {
+                justify-content: center;
+            }
+
+            .agent-title-holder {
+                img {
+                    width: 64px;
+                    height: 64px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
+
+            .agent-name {
+                font-size: 24px;
+                line-height: 150%;
+                color: $blue;
+
+                @include mb-portrait {
+                    font-size: 14px;
+                }
+            }
+
+            .agent-pos {
+                @include aboutTitle();
+            }
+        }
+
+        .agent-desc {
+            font-size: 20px;
+            line-height: 160%;
+            color: $blue;
+            margin: 24px 0px 34px;
+
+            @include tablet {
+                font-size: 18px;
+            }
+
+            @include mb-portrait {
+                font-size: 14px;
+            }
+        }
+
+        .view-prof {
+            @include button();
+            background: $blue;
+            padding: 16px 32px;
+            color: $white;
+
+            @include mb-landscape {
+                font-size: 12px;
+            }
+            @include mb-portrait {
+                padding: 12px 22px;
+            }
+        }
+    }
+
+    &-right {
+        width: 48.78%;
+
+        @include sm-screen {
+            width: 100%;
+            margin-top: 3em;
+        }
+    }
+
+    &-right-main {
+        position: sticky;
+        top: 20px;
+    }
+
+    &-right-img-holder {
+        img {
+            border-radius: 12px;
+        }
+    }
+
+    &-right-bottom {
+        background: #ffffff;
+        border: 1px solid rgba(18, 52, 71, 0.25);
+        box-shadow: 0px 4px 12px rgba(18, 52, 71, 0.12);
+        border-radius: 12px;
+        padding: 24px 2.17em 32px;
+        margin-top: 32px;
+
+        @include mb-portrait {
+            text-align: center;
+        }
+
+        .interested {
+            @include aboutTitle();
+        }
+
+        .book-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 8px;
+
+            @include tablet {
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+            @include mb-portrait {
+                justify-content: center;
+            }
+        }
+
+        .book-tour {
+            max-width: 304px;
+            font-size: 24px;
+            line-height: 150%;
+            color: $blue;
+
+            @include mb-landscape {
+                max-width: 100%;
+                font-size: 20px;
+            }
+        }
+
+        .book-btn {
+            @include button();
+            background: $blue;
+            padding: 16px 32px;
+            color: $white;
+
+            @include mb-landscape {
+                font-size: 12px;
+            }
+
+            @include mb-portrait {
+                padding: 12px 22px;
+            }
+        }
+    }
+}

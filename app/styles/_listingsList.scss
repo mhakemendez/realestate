@@ -1,0 +1,153 @@
+@import "mediaQueries";
+
+.listings {
+    background: $white-bg;
+    &-container {
+        @include container();
+        padding: 5.43em 5.43em 8.15em;
+    }
+
+    &-title {
+        @include title();
+        color: $blue;
+
+        @include tablet {
+            font-size: 32px;
+        }
+        @include mb-portrait {
+            font-size: 28px;
+        }
+    }
+
+    .related-listings-title {
+        @include aboutTitle();
+        margin-bottom: 2.17em;
+    }
+
+    &-sub-title {
+        font-size: 16px;
+        line-height: 150%;
+        color: $blue;
+        margin: 16px 0px 40px;
+    }
+
+    &-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2.17em;
+        grid-template-rows: repeat(2, auto);
+        row-gap: 2.17em;
+
+        @include sm-screen {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include tablet {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-img-holder {
+        position: relative;
+        &::after {
+            content: "Luxyry";
+            background: #ffffff;
+            border-radius: 2px;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: $blue;
+            padding: 8px 24px;
+        }
+        img {
+            border-radius: 12px 12px 0px 0px;
+        }
+    }
+
+    &-info {
+        padding: 32px;
+        background: $white;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        box-shadow: 0px 4px 12px rgba(18, 52, 71, 0.12);
+        border-radius: 0px 0px 12px 12px;
+
+        .listings-name {
+            font-size: 32px;
+            line-height: 100%;
+            letter-spacing: -0.01em;
+            color: $blue;
+            font-family: $crimson;
+            max-width: 351px;
+
+            @include sm-screen {
+                font-size: 28px;
+            }
+        }
+
+        .listings-amts {
+            margin-top: 1.9em;
+            margin-bottom: 6.18em;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+
+            .amts {
+                font-size: 16px;
+                line-height: 150%;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+                color: $blue;
+                padding: 4px 16px;
+                border: 1px solid #e6ebeb;
+                border-radius: 2px;
+            }
+        }
+
+        .price {
+            margin-top: auto;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 100%;
+            color: $blue;
+        }
+    }
+
+    .more-list {
+        background: $blue;
+        padding: 32px;
+        border-radius: 12px;
+    }
+
+    .more-listings {
+        font-size: 40px;
+        line-height: 120%;
+        letter-spacing: -0.01em;
+        color: #f3f8f8;
+        max-width: 314px;
+        margin-bottom: 298px;
+
+        @include tablet {
+            max-width: 100%;
+        }
+        @include mb-portrait {
+            margin-bottom: 120px;
+            font-size: 22px;
+        }
+    }
+
+    .brws-listings {
+        @include button();
+        padding: 16px 0;
+        margin-top: auto;
+    }
+}

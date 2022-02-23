@@ -1,0 +1,24 @@
+.about-nav {
+    background: $white-font;
+
+    .navbar-brand {
+        color: $blue;
+    }
+
+    .navbar-toggler {
+        i {
+            color: $blue;
+        }
+    }
+
+    .nav-item {
+        .nav-link {
+            color: $blue;
+        }
+
+        .contact-btn {
+            background: $blue;
+            color: $white;
+        }
+    }
+}

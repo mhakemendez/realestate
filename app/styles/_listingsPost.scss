@@ -1,0 +1,145 @@
+.post {
+    &-container {
+        @include container();
+        padding: 5.43em 5.43em 8.15em;
+    }
+
+    &-title {
+        @include title();
+        color: $white;
+
+        @include sm-screen {
+            font-size: 32px;
+        }
+
+        @include mb-portrait {
+            font-size: 28px;
+        }
+    }
+
+    &-st-btn {
+        display: flex;
+        justify-content: space-between;
+        margin: 16px 0px 64px;
+
+        @include tablet {
+            flex-direction: column;
+            gap: 12px;
+        }
+    }
+
+    &-st {
+        font-size: 16px;
+        line-height: 150%;
+        color: #ffffff;
+        max-width: 503px;
+
+        @include sm-screen {
+            max-width: 400px;
+        }
+
+        @include mb-portrait {
+            font-size: 14px;
+        }
+    }
+
+    &-btn {
+        @include button();
+        padding: 16px 32px;
+    }
+
+    &-bottom-box {
+        display: flex;
+        gap: 32px;
+
+        @include tablet {
+            flex-direction: column;
+        }
+    }
+
+    &-featured {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-img-holder {
+        position: relative;
+        &::after {
+            content: "news";
+            background: $white;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 8px 24px;
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: $blue;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px 12px 0px 0px;
+        }
+    }
+
+    &-info-box {
+        background: $white;
+        padding: 32px;
+        border-radius: 0px 0px 12px 12px;
+    }
+
+    &-fea-title {
+        font-size: 40px;
+        line-height: 140%;
+        color: $blue;
+        max-width: 448px;
+
+        @include sm-screen {
+            font-size: 28px;
+        }
+
+        @include mb-portrait {
+            font-size: 18px;
+        }
+    }
+
+    &-para {
+        font-size: 20px;
+        line-height: 160%;
+        color: $blue;
+        margin: 12px 0px 26px;
+
+        @include sm-screen {
+            font-size: 16px;
+        }
+
+        @include mb-portrait {
+            font-size: 14px;
+        }
+    }
+
+    &-auth-date {
+        display: flex;
+        gap: 8px;
+
+        @include mb-portrait {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+    &-author,
+    &-date {
+        padding: 4px 16px;
+        border: 1px solid #e6ebeb;
+        border-radius: 2px;
+        font-size: 16px;
+        line-height: 150%;
+
+        @include sm-screen {
+            font-size: 12px;
+        }
+    }
+}
